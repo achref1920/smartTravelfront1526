@@ -1,0 +1,88 @@
+<div class="fixed top-0 left-0 w-72 h-full bg-slate-900 text-white shadow-2xl z-50 flex flex-col font-sans">
+
+    <!-- Branding Section -->
+    <div class="p-8 border-b border-white/10 relative overflow-hidden group">
+        <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        </div>
+        <div class="relative z-10">
+            <h1
+                class="text-3xl font-black bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent tracking-tighter">
+                TravelSmart
+                <span class="text-xs font-medium text-slate-400 block mt-1 tracking-widest uppercase">Admin
+                    Portal</span>
+            </h1>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="flex-1 overflow-y-auto py-8 px-4 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent">
+        <div class="mb-4 px-4 text-xs font-bold text-slate-500 uppercase tracking-widest">External Search</div>
+
+        <ul class="space-y-3">
+
+            <!-- Flights Tab -->
+            <li [routerLink]="['/admin/external-search']" [queryParams]="{tab: 'flights'}" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: false}" class="group">
+                <a
+                    class="flex items-center gap-4 px-4 py-3.5 rounded-xl text-slate-300 hover:text-white transition-all duration-300 cursor-pointer relative overflow-hidden group-[.active]:bg-blue-600/20 group-[.active]:text-white hover:bg-white/5">
+                    <div class="relative z-10 flex items-center gap-4 w-full">
+                        <span class="text-xl">✈️</span>
+                        <span class="font-semibold text-sm">Flights</span>
+                    </div>
+                </a>
+            </li>
+
+            <!-- Hotels Tab -->
+            <li [routerLink]="['/admin/external-search']" [queryParams]="{tab: 'hotels'}" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: false}" class="group">
+                <a
+                    class="flex items-center gap-4 px-4 py-3.5 rounded-xl text-slate-300 hover:text-white transition-all duration-300 cursor-pointer relative overflow-hidden group-[.active]:bg-blue-600/20 group-[.active]:text-white hover:bg-white/5">
+                    <div class="relative z-10 flex items-center gap-4 w-full">
+                        <span class="text-xl">🏨</span>
+                        <span class="font-semibold text-sm">Hotels</span>
+                    </div>
+                </a>
+            </li>
+
+            <!-- Airports Tab -->
+            <li [routerLink]="['/admin/external-search']" [queryParams]="{tab: 'airports'}" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: false}" class="group">
+                <a
+                    class="flex items-center gap-4 px-4 py-3.5 rounded-xl text-slate-300 hover:text-white transition-all duration-300 cursor-pointer relative overflow-hidden group-[.active]:bg-blue-600/20 group-[.active]:text-white hover:bg-white/5">
+                    <div class="relative z-10 flex items-center gap-4 w-full">
+                        <span class="text-xl">🛫</span>
+                        <span class="font-semibold text-sm">Airports</span>
+                    </div>
+                </a>
+            </li>
+
+            <!-- Airlines Tab -->
+            <li [routerLink]="['/admin/external-search']" [queryParams]="{tab: 'airlines'}" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: false}" class="group">
+                <a
+                    class="flex items-center gap-4 px-4 py-3.5 rounded-xl text-slate-300 hover:text-white transition-all duration-300 cursor-pointer relative overflow-hidden group-[.active]:bg-blue-600/20 group-[.active]:text-white hover:bg-white/5">
+                    <div class="relative z-10 flex items-center gap-4 w-full">
+                        <span class="text-xl">🦅</span>
+                        <span class="font-semibold text-sm">Airlines</span>
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- User Profile & Settings -->
+    <div class="p-4 border-t border-white/5 bg-slate-900/50">
+        <div class="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors cursor-pointer group">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 p-0.5">
+                <div
+                    class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-sm font-bold text-blue-400">
+                    ADM</div>
+            </div>
+            <div class="flex-1">
+                <div class="text-sm font-bold text-white group-hover:text-blue-400 transition-colors">Admin User</div>
+                <div class="text-xs text-slate-500">Administrator</div>
+            </div>
+        </div>
+    </div>
+</div>
